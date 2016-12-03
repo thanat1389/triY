@@ -1,5 +1,5 @@
 """make graph"""
-import pygal                                                       # First import pygal
+import pygal
 from xlrd import open_workbook
 def make_graph():
     """make graph in section center"""
@@ -21,8 +21,8 @@ def make_graph():
 
 
     #make graph
-    line_chart =  pygal.Bar() #รูปแบบของ graph
-    line_chart.title = sheet.cell(0, 0).value
+    line_chart =  pygal.Bar()
+    line_chart.title = 'ภาวะการทำงานของประชากร พ.ศ. 2554'
     career = []
     for i in [sheet.cell(col_index, 0).value for col_index in range(1, 11)]:
         career.append(i)
@@ -40,4 +40,5 @@ def make_graph():
     line_chart.add(sheet.cell(0, 10).value, octo)
     line_chart.add(sheet.cell(0, 11).value, nov)
     line_chart.render_to_file('54.svg')
+
 make_graph()
