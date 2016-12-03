@@ -6,7 +6,7 @@ def make_graph():
 
     #open worksheet
     book = open_workbook('D:/MB_Boss/KMITL/PSIT/Project/54,57.xlsx')
-    sheet = book.sheet_by_index(1) #code select sheet
+    sheet = book.sheet_by_index(0) #code select sheet
     jan = [sheet.cell(col_index, 1).value for col_index in range(1, 11)]
     feb = [sheet.cell(col_index, 2).value for col_index in range(1, 11)]
     mar = [sheet.cell(col_index, 3).value for col_index in range(1, 11)]
