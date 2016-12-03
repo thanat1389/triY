@@ -22,7 +22,7 @@ def make_graph():
 
     #make graph
     line_chart = pygal.Bar() #style's graph
-    line_chart.title = sheet.cell(0,0).value
+    line_chart.title = 'ภาวะการทำงานของประชากร พ.ศ. 2558'
     career = []
     for i in [sheet.cell(col_index, 0).value for col_index in range(1,11)]:
         career.append(i)
