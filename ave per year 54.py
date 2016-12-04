@@ -20,8 +20,8 @@ def make_graph():
 
 
     #make graph
-    line_chart =  pygal.Bar()
-    line_chart.title = sheet.cell(0, 0).value
+    line_chart =  pygal.Bar(x_label_rotation=25)
+    line_chart.title = 'กราฟแสดงอัตราเฉลี่ยแต่ละอาชีพต่อปี พ.ศ.2554'
     career = []
     count_law = 0
     count_profess = 0
