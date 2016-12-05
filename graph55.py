@@ -1,6 +1,5 @@
 """analyse data"""
 import pygal
-from pygal.style import DarkStyle
 from xlrd import open_workbook
 def make_graph():
     """make graph in section center"""
@@ -22,7 +21,7 @@ def make_graph():
     dec = [sheet.cell(col_index, 12).value for col_index in range(1, 11)]
 
     #make graph
-    line_chart = pygal.Bar(x_label_rotation=25, style=DarkStyle) #style's graph
+    line_chart = pygal.Bar(x_label_rotation=25) #style's graph
     line_chart.title = 'ภาวะการทำงานของประชากร พ.ศ. 2555'
     line_chart.x_labels = []
     for i in [sheet.cell(col_index, 0).value for col_index in range(1,11)]:
