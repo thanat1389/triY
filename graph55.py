@@ -21,13 +21,13 @@ def make_graph():
     dec = [sheet.cell(col_index, 12).value for col_index in range(1, 11)]
 
     #make graph
-    line_chart = pygal.Bar() #style's graph
+    line_chart = pygal.Bar(x_label_rotation=25) #style's graph
     line_chart.title = 'ภาวะการทำงานของประชากร พ.ศ. 2555'
-    career = []
+    line_chart.x_labels = []
     for i in [sheet.cell(col_index, 0).value for col_index in range(1,11)]:
-        career.append(i)
+        line_chart.x_labels.append(i)
 
-    line_chart.x_labels = map(str, career)
+    line_chart.x_labels = map(str, line_chart.x_labels)
     line_chart.add(sheet.cell(0,1).value, jan)
     line_chart.add(sheet.cell(0,2).value, feb)
     line_chart.add(sheet.cell(0,3).value, mar)
