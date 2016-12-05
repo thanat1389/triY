@@ -21,7 +21,7 @@ def make_graph():
 
 
     #make graph
-    neon_lighten_style = RotateStyle('#9e6ffe', base_style=DarkStyle)
+    neon_lighten_style = RotateStyle('#FFCCFF', base_style=DarkStyle)
     line_chart =  pygal.Bar(x_label_rotation=25, style=neon_lighten_style)
     line_chart.title = 'กราฟแสดงอัตราเฉลี่ยแต่ละอาชีพต่อปี พ.ศ.2554'
     career = []
