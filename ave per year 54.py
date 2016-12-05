@@ -1,5 +1,6 @@
 """make graph"""
 import pygal
+from pygal.style import RotateStyle, DarkStyle
 from xlrd import open_workbook
 def make_graph():
     """make graph in section center"""
@@ -20,7 +21,8 @@ def make_graph():
 
 
     #make graph
-    line_chart =  pygal.Bar(x_label_rotation=25)
+    neon_lighten_style = RotateStyle('#9e6ffe', base_style=DarkStyle)
+    line_chart =  pygal.Bar(x_label_rotation=25, style=neon_lighten_style)
     line_chart.title = 'กราฟแสดงอัตราเฉลี่ยแต่ละอาชีพต่อปี พ.ศ.2554'
     career = []
     count_law = 0
