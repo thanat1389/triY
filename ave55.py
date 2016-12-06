@@ -8,16 +8,16 @@ def make_graph():
     #open worksheet
     book = open_workbook('D:/PSIIT/job55_2.xlsx')
     sheet = book.sheet_by_index(0) #select sheet
-    law = [sheet.cell(1, col_index).value for col_index in range(1, 12)]
-    profess = [sheet.cell(2, col_index).value for col_index in range(1, 12)]
-    tech = [sheet.cell(3, col_index).value for col_index in range(1, 12)]
-    clerk = [sheet.cell(4, col_index).value for col_index in range(1, 12)]
-    market = [sheet.cell(5, col_index).value for col_index in range(1, 12)]
-    fishing = [sheet.cell(6, col_index).value for col_index in range(1, 12)]
-    business = [sheet.cell(7, col_index).value for col_index in range(1, 12)]
-    fact = [sheet.cell(8, col_index).value for col_index in range(1, 12)]
-    sale = [sheet.cell(9, col_index).value for col_index in range(1, 12)]
-    other = [sheet.cell(10, col_index).value for col_index in range(1, 12)]
+    law = [sheet.cell(1, col_index).value for col_index in range(1, 13)]
+    profess = [sheet.cell(2, col_index).value for col_index in range(1, 13)]
+    tech = [sheet.cell(3, col_index).value for col_index in range(1, 13)]
+    clerk = [sheet.cell(4, col_index).value for col_index in range(1, 13)]
+    market = [sheet.cell(5, col_index).value for col_index in range(1, 13)]
+    fishing = [sheet.cell(6, col_index).value for col_index in range(1, 13)]
+    business = [sheet.cell(7, col_index).value for col_index in range(1, 13)]
+    fact = [sheet.cell(8, col_index).value for col_index in range(1, 13)]
+    sale = [sheet.cell(9, col_index).value for col_index in range(1, 13)]
+    other = [sheet.cell(10, col_index).value for col_index in range(1, 13)]
 
     #make graph
     neon_lighten_style = RotateStyle('#9e6ffe', base_style=DarkStyle)
@@ -40,34 +40,34 @@ def make_graph():
     #ave per month
     for i in law:
         count_law += i
-    count_law = float("%.2f" %(count_law/11))
+    count_law = float("%.2f" %(count_law/12))
     for i in profess:
         count_profess += i
-    count_profess = float("%.2f" %(count_profess/11))
+    count_profess = float("%.2f" %(count_profess/12))
     for i in tech:
         count_tech += i
-    count_tech = float("%.2f" %(count_tech/11))
+    count_tech = float("%.2f" %(count_tech/12))
     for i in clerk:
         count_clerk += i
-    count_clerk = float("%.2f" %(count_clerk/11))
+    count_clerk = float("%.2f" %(count_clerk/12))
     for i in market:
         count_market += i
-    count_market = float("%.2f" %(count_market/11))
+    count_market = float("%.2f" %(count_market/12))
     for i in fishing:
         count_fishing += i
-    count_fishing = float("%.2f" %(count_fishing/11))
+    count_fishing = float("%.2f" %(count_fishing/12))
     for i in business:
         count_business += i
-    count_business = float("%.2f" %(count_business/11))
+    count_business = float("%.2f" %(count_business/12))
     for i in fact:
         count_fact += i
-    count_fact = float("%.2f" %(count_fact/11))
+    count_fact = float("%.2f" %(count_fact/12))
     for i in sale:
         count_sale += i
-    count_sale = float("%.2f" %(count_sale/11))
+    count_sale = float("%.2f" %(count_sale/12))
     for i in other:
         count_other += i
-    count_other = float("%.2f" %(count_other/11))
+    count_other = float("%.2f" %(count_other/12))
 
     
     line_chart.x_labels = map(str, career)
